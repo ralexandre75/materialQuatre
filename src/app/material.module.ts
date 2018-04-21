@@ -4,14 +4,16 @@ import { MatButtonModule,
 		 MatCardModule,
 		 MatStepperModule,
 		 MatTabsModule,
-		 MatExpansionModule } from '@angular/material';
+		 MatExpansionModule,
+		 MatButtonToggleModule } from '@angular/material';
 
 const MATERIAL = [
 	MatButtonModule,
 	MatCardModule,
 	MatStepperModule,
 	MatTabsModule,
-	MatExpansionModule
+	MatExpansionModule,
+	MatButtonToggleModule
 ]
 
 @NgModule({
