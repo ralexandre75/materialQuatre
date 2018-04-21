@@ -58,6 +58,18 @@
  	</div>
  	<br>
  	<br>
+ 	<div class="row">
+ 		<h3 class="col-12"> Chips </h3>
+ 		<div class="col-6 mx-auto">
+ 			<mat-chip-list>
+ 				<mat-chip (remove)="delete(item)" *ngFor="let item of list"> {{ item }} 
+ 					<mat-icon matChipRemove >cancel</mat-icon>
+ 				</mat-chip>
+ 			</mat-chip-list>
+ 		</div>
+ 	</div>
+ 	<br>
+ 	<br>
 </div>
 
 
