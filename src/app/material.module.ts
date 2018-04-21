@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule,
 		 MatCardModule,
 		 MatStepperModule,
-		 MatTabsModule } from '@angular/material';
+		 MatTabsModule,
+		 MatExpansionModule } from '@angular/material';
 
 const MATERIAL = [
 	MatButtonModule,
 	MatCardModule,
 	MatStepperModule,
-	MatTabsModule
+	MatTabsModule,
+	MatExpansionModule
 ]
 
 @NgModule({
