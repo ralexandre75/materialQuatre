@@ -7,7 +7,8 @@ import { MatButtonModule,
 		 MatExpansionModule,
 		 MatButtonToggleModule,
 		 MatChipsModule,
-		 MatIconModule } from '@angular/material';
+		 MatIconModule,
+		 MatIconRegistry } from '@angular/material';
 
 const MATERIAL = [
 	MatButtonModule,
@@ -26,6 +27,7 @@ const MATERIAL = [
     ...MATERIAL
   ],
   exports: MATERIAL,
+  providers: [MatIconRegistry],
   declarations: []
 })
 export class MaterialModule { }

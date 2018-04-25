@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, Inject } from '@angular/core';
+import { FormGroup, Validators, FormControl, FormBuilder } from '@angular/forms';
+import { MatIconRegistry } from '@angular/material';
+import { Observable } from 'rxjs/Observable';
+
 
 @Component({
   selector: 'app-root',
@@ -6,6 +10,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  //  constructor(private fb: FormBuilder, private matIconRegistry: MatIconRegistry){}
+
+  
+  // ngOnInit(){
+  //   this.matIconRegistry.registerFontClassAlias('fontawesome', 'fa');
+  // }
+
+
   public list: string[] = [
   	'chip1',
   	'chip2',
@@ -13,9 +25,13 @@ export class AppComponent {
   	'chip4'
   ]
 
-
   public delete(chip){
   	console.log(chip);
   	this.list = this.list.filter( c => c != chip);
   }
+
+  public form: FormGroup;
+
+
 }
+
