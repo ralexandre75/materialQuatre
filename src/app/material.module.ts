@@ -11,7 +11,8 @@ import { MatButtonModule,
 		 MatIconRegistry,
 		 MatProgressSpinnerModule,
 		 MatProgressBarModule,
-		 MatDialogModule } from '@angular/material';
+		 MatDialogModule,
+		 MatTooltipModule } from '@angular/material';
 
 const MATERIAL = [
 	MatButtonModule,
@@ -24,7 +25,8 @@ const MATERIAL = [
 	MatIconModule,
 	MatProgressSpinnerModule,
 	MatProgressBarModule,
-	MatDialogModule
+	MatDialogModule,
+	MatTooltipModule
 ]
 
 @NgModule({
