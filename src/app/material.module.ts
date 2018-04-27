@@ -10,7 +10,8 @@ import { MatButtonModule,
 		 MatIconModule,
 		 MatIconRegistry,
 		 MatProgressSpinnerModule,
-		 MatProgressBarModule } from '@angular/material';
+		 MatProgressBarModule,
+		 MatDialogModule } from '@angular/material';
 
 const MATERIAL = [
 	MatButtonModule,
@@ -22,7 +23,8 @@ const MATERIAL = [
 	MatChipsModule,
 	MatIconModule,
 	MatProgressSpinnerModule,
-	MatProgressBarModule
+	MatProgressBarModule,
+	MatDialogModule
 ]
 
 @NgModule({

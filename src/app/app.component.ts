@@ -2,6 +2,8 @@ import { Component, ViewChild, Inject } from '@angular/core';
 import { FormGroup, Validators, FormControl, FormBuilder } from '@angular/forms';
 import { MatIconRegistry } from '@angular/material';
 import { Observable } from 'rxjs/Observable';
+import { MatDialog } from '@angular/material';
+import { DialogComponent } from './dialog/dialog.component';
 
 
 @Component({
@@ -11,6 +13,8 @@ import { Observable } from 'rxjs/Observable';
 })
 export class AppComponent {
   //  constructor(private fb: FormBuilder, private matIconRegistry: MatIconRegistry){}
+
+  constructor(private dialog: MatDialog){}
 
   
   // ngOnInit(){
@@ -31,6 +35,13 @@ export class AppComponent {
   }
 
   public form: FormGroup;
+
+  public openDialog(): void{
+    this.dialog.open(DialogComponent, {
+      width: '800px',
+      height: '400px'
+    });
+  }
 
 
 }
