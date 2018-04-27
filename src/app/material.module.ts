@@ -8,7 +8,9 @@ import { MatButtonModule,
 		 MatButtonToggleModule,
 		 MatChipsModule,
 		 MatIconModule,
-		 MatIconRegistry } from '@angular/material';
+		 MatIconRegistry,
+		 MatProgressSpinnerModule,
+		 MatProgressBarModule } from '@angular/material';
 
 const MATERIAL = [
 	MatButtonModule,
@@ -18,7 +20,9 @@ const MATERIAL = [
 	MatExpansionModule,
 	MatButtonToggleModule,
 	MatChipsModule,
-	MatIconModule
+	MatIconModule,
+	MatProgressSpinnerModule,
+	MatProgressBarModule
 ]
 
 @NgModule({
