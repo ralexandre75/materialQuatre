@@ -2,7 +2,7 @@ import { Component, ViewChild, Inject } from '@angular/core';
 import { FormGroup, Validators, FormControl, FormBuilder } from '@angular/forms';
 import { MatIconRegistry } from '@angular/material';
 import { Observable } from 'rxjs/Observable';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatSnackBar } from '@angular/material';
 import { DialogComponent } from './dialog/dialog.component';
 
 
@@ -14,7 +14,8 @@ import { DialogComponent } from './dialog/dialog.component';
 export class AppComponent {
   //  constructor(private fb: FormBuilder, private matIconRegistry: MatIconRegistry){}
 
-  constructor(private dialog: MatDialog){}
+  constructor(private dialog: MatDialog,
+              private snack: MatSnackBar ){}
 
   
   // ngOnInit(){
@@ -41,6 +42,20 @@ export class AppComponent {
       width: '800px',
       height: '400px'
     });
+  }
+
+  public info(message: string): void{
+    const snackRef = this.snack.open(message, 'cancel', {
+      duration: 2000
+    });
+
+    snackRef.onAction().subscribe( ()=> {
+      console.log('cancel');
+    })
+
+    snackRef.afterDismissed().subscribe(()=>{
+      console.log('done');
+    })
   }
 
 
