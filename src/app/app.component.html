@@ -136,6 +136,10 @@
  		<h3 class="col-12"> tableau </h3>
  		<div class="col-10 mx-auto" style="margin-bottom: 100px;">
 
+ 			<mat-form-field>
+ 				<input placeholder="filtre" matInput type="text" (keyup)="updateFilter($event.target.value)" > 
+ 			</mat-form-field>
+
  			<mat-table #table [dataSource]="dataSource" matSort>
 
  				<ng-container matColumnDef="gender">

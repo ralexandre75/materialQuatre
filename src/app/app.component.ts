@@ -82,6 +82,11 @@ export class AppComponent {
     })
   }
 
+  public updateFilter (filter: string): void {
+    filter = filter.trim().toLowerCase();
+    this.dataSource.filter = filter;
+  }
+
 
 }
 
