@@ -4,23 +4,43 @@ import { MatIconRegistry } from '@angular/material';
 import { Observable } from 'rxjs/Observable';
 import { MatDialog, MatSnackBar } from '@angular/material';
 import { DialogComponent } from './dialog/dialog.component';
+import { DataService } from './data.service';
+import { MatTableDataSource } from '@angular/material';
+
+interface User {
+  gender: 'male' | 'female',
+  cell: string,
+  email: string,
+  nat: string,
+  phone: string
+}
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
+  providers: [ DataService ]
 })
 export class AppComponent {
+  public users: User[];
+  public dataSource: MatTableDataSource<User>;
+  public displayedColumns: string[] = ['gender', 'cell', 'email', 'nat', 'phone']
+
   //  constructor(private fb: FormBuilder, private matIconRegistry: MatIconRegistry){}
 
   constructor(private dialog: MatDialog,
-              private snack: MatSnackBar ){}
+              private snack: MatSnackBar,
+              private dataService: DataService ){}
 
   
-  // ngOnInit(){
+  ngOnInit(){
+ /*   this.dataService.fetchUsers().subscribe( users => {
+      this.users = users;
+      this.dataSource = new MatTableDataSource(this.users);
+    }); */
   //   this.matIconRegistry.registerFontClassAlias('fontawesome', 'fa');
-  // }
+  }
 
 
   public list: string[] = [

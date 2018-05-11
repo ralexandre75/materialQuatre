@@ -132,6 +132,43 @@
  	</div>
  	<br>
  	<br>
+ 	<div class="row">
+ 		<h3 class="col-12"> tableau </h3>
+ 		<div class="col-10 mx-auto" style="margin-bottom: 100px;">
+ 			<mat-table #table [dataSource]="dataSource">
+
+ 				<ng-container matColumnDef="gender">
+ 					<mat-header-cell *matHeaderCellDef> gender </mat-header-cell>
+ 					<mat-cell *matCellDef="let user">{{ user.gender}}</mat-cell>
+ 				</ng-container>
+
+ 				<ng-container matColumnDef="cell">
+ 					<mat-header-cell *matHeaderCellDef> cell </mat-header-cell>
+ 					<mat-cell *matCellDef="let user">{{ user.cell }}</mat-cell>
+ 				</ng-container>
+
+ 				<ng-container matColumnDef="email">
+ 					<mat-header-cell *matHeaderCellDef> email </mat-header-cell>
+ 					<mat-cell *matCellDef="let user">{{ user.email }}</mat-cell>
+ 				</ng-container>
+
+ 				<ng-container matColumnDef="nat">
+ 					<mat-header-cell *matHeaderCellDef> nat </mat-header-cell>
+ 					<mat-cell *matCellDef="let user">{{ user.nat }}</mat-cell>
+ 				</ng-container>
+
+ 				<ng-container matColumnDef="phone">
+ 					<mat-header-cell *matHeaderCellDef> phone </mat-header-cell>
+ 					<mat-cell *matCellDef="let user">{{ user.phone }}</mat-cell>
+ 				</ng-container>
+ 				
+ 				<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+ 				<mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+ 				
+ 			</mat-table>
+ 			
+ 		</div>
+ 	</div>
 </div>
 
 
