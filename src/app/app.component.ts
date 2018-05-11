@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { MatDialog, MatSnackBar } from '@angular/material';
 import { DialogComponent } from './dialog/dialog.component';
 import { DataService } from './data.service';
-import { MatTableDataSource } from '@angular/material';
+import { MatTableDataSource, MatPaginator } from '@angular/material';
 
 interface User {
   gender: 'male' | 'female',
@@ -26,6 +26,7 @@ export class AppComponent {
   public users: User[];
   public dataSource: MatTableDataSource<User>;
   public displayedColumns: string[] = ['gender', 'cell', 'email', 'nat', 'phone']
+  @ViewChild('paginator') public paginator: MatPaginator;
 
   //  constructor(private fb: FormBuilder, private matIconRegistry: MatIconRegistry){}
 
@@ -38,6 +39,7 @@ export class AppComponent {
  /*   this.dataService.fetchUsers().subscribe( users => {
       this.users = users;
       this.dataSource = new MatTableDataSource(this.users);
+      this.dataSource.paginator = this.paginator;
     }); */
   //   this.matIconRegistry.registerFontClassAlias('fontawesome', 'fa');
   }
